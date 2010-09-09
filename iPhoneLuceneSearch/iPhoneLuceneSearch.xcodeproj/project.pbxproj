@@ -1,0 +1,789 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A10EBF411FC375E00F094F9 /* Lucene.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A10EBF311FC375E00F094F9 /* Lucene.png */; };
+		0A10EBF611FC376C00F094F9 /* libS4LuceneLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A10EBF511FC376C00F094F9 /* libS4LuceneLib.a */; };
+		0A10ECAF11FC389E00F094F9 /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A10ECAE11FC389E00F094F9 /* data.txt */; };
+		0A10ECBC11FC394B00F094F9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A10ECBB11FC394B00F094F9 /* CoreLocation.framework */; };
+		0A10ECBE11FC394B00F094F9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A10ECBD11FC394B00F094F9 /* MapKit.framework */; };
+		0A10ECC011FC394B00F094F9 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A10ECBF11FC394B00F094F9 /* MediaPlayer.framework */; };
+		0A10ECC211FC394B00F094F9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A10ECC111FC394B00F094F9 /* MessageUI.framework */; };
+		0A10ECC411FC394B00F094F9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A10ECC311FC394B00F094F9 /* OpenGLES.framework */; };
+		0A10ECC611FC394B00F094F9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A10ECC511FC394B00F094F9 /* Security.framework */; };
+		0A10ECC811FC394B00F094F9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A10ECC711FC394B00F094F9 /* SystemConfiguration.framework */; };
+		0A10ECCA11FC394B00F094F9 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A10ECC911FC394B00F094F9 /* libxml2.dylib */; };
+		0A10ECCC11FC394B00F094F9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A10ECCB11FC394B00F094F9 /* libz.dylib */; };
+		0A87AAD8123869250094AAED /* libS4iOSLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A87AA37123869250094AAED /* libS4iOSLib.a */; };
+		0A87AAD9123869260094AAED /* ico_arrowleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A87AA39123869250094AAED /* ico_arrowleft.png */; };
+		0A87AADA123869260094AAED /* ico_arrowright.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A87AA3A123869250094AAED /* ico_arrowright.png */; };
+		0A87AADB123869260094AAED /* ico_refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A87AA3B123869250094AAED /* ico_refresh.png */; };
+		0A87AB76123869260094AAED /* S4WebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A87AAD7123869250094AAED /* S4WebView.xib */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		9D2F5E530EDB2CC3002CF2D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F5E520EDB2CC3002CF2D6 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A10EBF311FC375E00F094F9 /* Lucene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lucene.png; path = ../S4LuceneLib/dist/Resources/Lucene.png; sourceTree = SOURCE_ROOT; };
+		0A10EBF511FC376C00F094F9 /* libS4LuceneLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libS4LuceneLib.a; path = ../S4LuceneLib/dist/libS4LuceneLib.a; sourceTree = SOURCE_ROOT; };
+		0A10EBF811FC378A00F094F9 /* Analysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Analysis.h; path = ../S4LuceneLib/dist/Headers/Analysis.h; sourceTree = SOURCE_ROOT; };
+		0A10EBF911FC378A00F094F9 /* CodeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CodeHandler.h; path = ../S4LuceneLib/dist/Headers/CodeHandler.h; sourceTree = SOURCE_ROOT; };
+		0A10EBFA11FC378A00F094F9 /* CodeParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CodeParser.h; path = ../S4LuceneLib/dist/Headers/CodeParser.h; sourceTree = SOURCE_ROOT; };
+		0A10EBFB11FC378A00F094F9 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Document.h; path = ../S4LuceneLib/dist/Headers/Document.h; sourceTree = SOURCE_ROOT; };
+		0A10EBFC11FC378A00F094F9 /* GNUstep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GNUstep.h; path = ../S4LuceneLib/dist/Headers/GNUstep.h; sourceTree = SOURCE_ROOT; };
+		0A10EBFD11FC378A00F094F9 /* Index.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Index.h; path = ../S4LuceneLib/dist/Headers/Index.h; sourceTree = SOURCE_ROOT; };
+		0A10EBFE11FC378A00F094F9 /* Java.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Java.h; path = ../S4LuceneLib/dist/Headers/Java.h; sourceTree = SOURCE_ROOT; };
+		0A10EBFF11FC378A00F094F9 /* LCAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCAnalyzer.h; path = ../S4LuceneLib/dist/Headers/LCAnalyzer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0011FC378A00F094F9 /* LCBitVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCBitVector.h; path = ../S4LuceneLib/dist/Headers/LCBitVector.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0111FC378A00F094F9 /* LCBooleanClause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCBooleanClause.h; path = ../S4LuceneLib/dist/Headers/LCBooleanClause.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0211FC378A00F094F9 /* LCBooleanQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCBooleanQuery.h; path = ../S4LuceneLib/dist/Headers/LCBooleanQuery.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0311FC378A00F094F9 /* LCBooleanScorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCBooleanScorer.h; path = ../S4LuceneLib/dist/Headers/LCBooleanScorer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0411FC378A00F094F9 /* LCCachingWrapperFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCCachingWrapperFilter.h; path = ../S4LuceneLib/dist/Headers/LCCachingWrapperFilter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0511FC378A00F094F9 /* LCCharTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCCharTokenizer.h; path = ../S4LuceneLib/dist/Headers/LCCharTokenizer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0611FC378A00F094F9 /* LCCompoundFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCCompoundFileReader.h; path = ../S4LuceneLib/dist/Headers/LCCompoundFileReader.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0711FC378A00F094F9 /* LCCompoundFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCCompoundFileWriter.h; path = ../S4LuceneLib/dist/Headers/LCCompoundFileWriter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0811FC378A00F094F9 /* LCConjunctionScorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCConjunctionScorer.h; path = ../S4LuceneLib/dist/Headers/LCConjunctionScorer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0911FC378A00F094F9 /* LCDateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCDateFilter.h; path = ../S4LuceneLib/dist/Headers/LCDateFilter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0A11FC378A00F094F9 /* LCDateTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCDateTools.h; path = ../S4LuceneLib/dist/Headers/LCDateTools.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0B11FC378A00F094F9 /* LCDefaultSimilarity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCDefaultSimilarity.h; path = ../S4LuceneLib/dist/Headers/LCDefaultSimilarity.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0C11FC378A00F094F9 /* LCDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCDirectory.h; path = ../S4LuceneLib/dist/Headers/LCDirectory.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0D11FC378A00F094F9 /* LCDisjunctionSumScorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCDisjunctionSumScorer.h; path = ../S4LuceneLib/dist/Headers/LCDisjunctionSumScorer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0E11FC378A00F094F9 /* LCDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCDocument.h; path = ../S4LuceneLib/dist/Headers/LCDocument.h; sourceTree = SOURCE_ROOT; };
+		0A10EC0F11FC378A00F094F9 /* LCDocumentWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCDocumentWriter.h; path = ../S4LuceneLib/dist/Headers/LCDocumentWriter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1011FC378A00F094F9 /* LCExactPhraseScorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCExactPhraseScorer.h; path = ../S4LuceneLib/dist/Headers/LCExactPhraseScorer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1111FC378A00F094F9 /* LCExplanation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCExplanation.h; path = ../S4LuceneLib/dist/Headers/LCExplanation.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1211FC378A00F094F9 /* LCField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCField.h; path = ../S4LuceneLib/dist/Headers/LCField.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1311FC378A00F094F9 /* LCFieldCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFieldCache.h; path = ../S4LuceneLib/dist/Headers/LCFieldCache.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1411FC378A00F094F9 /* LCFieldCacheImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFieldCacheImpl.h; path = ../S4LuceneLib/dist/Headers/LCFieldCacheImpl.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1511FC378A00F094F9 /* LCFieldDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFieldDoc.h; path = ../S4LuceneLib/dist/Headers/LCFieldDoc.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1611FC378A00F094F9 /* LCFieldDocSortedHitQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFieldDocSortedHitQueue.h; path = ../S4LuceneLib/dist/Headers/LCFieldDocSortedHitQueue.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1711FC378A00F094F9 /* LCFieldInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFieldInfo.h; path = ../S4LuceneLib/dist/Headers/LCFieldInfo.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1811FC378A00F094F9 /* LCFieldInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFieldInfos.h; path = ../S4LuceneLib/dist/Headers/LCFieldInfos.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1911FC378A00F094F9 /* LCFieldSortedHitQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFieldSortedHitQueue.h; path = ../S4LuceneLib/dist/Headers/LCFieldSortedHitQueue.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1A11FC378A00F094F9 /* LCFieldsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFieldsReader.h; path = ../S4LuceneLib/dist/Headers/LCFieldsReader.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1B11FC378A00F094F9 /* LCFieldsWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFieldsWriter.h; path = ../S4LuceneLib/dist/Headers/LCFieldsWriter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1C11FC378A00F094F9 /* LCFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFilter.h; path = ../S4LuceneLib/dist/Headers/LCFilter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1D11FC378A00F094F9 /* LCFilteredQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFilteredQuery.h; path = ../S4LuceneLib/dist/Headers/LCFilteredQuery.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1E11FC378A00F094F9 /* LCFilteredTermEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFilteredTermEnum.h; path = ../S4LuceneLib/dist/Headers/LCFilteredTermEnum.h; sourceTree = SOURCE_ROOT; };
+		0A10EC1F11FC378A00F094F9 /* LCFilterIndexReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFilterIndexReader.h; path = ../S4LuceneLib/dist/Headers/LCFilterIndexReader.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2011FC378A00F094F9 /* LCFSDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFSDirectory.h; path = ../S4LuceneLib/dist/Headers/LCFSDirectory.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2111FC378A00F094F9 /* LCFSIndexInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFSIndexInput.h; path = ../S4LuceneLib/dist/Headers/LCFSIndexInput.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2211FC378A00F094F9 /* LCFSIndexOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFSIndexOutput.h; path = ../S4LuceneLib/dist/Headers/LCFSIndexOutput.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2311FC378A00F094F9 /* LCFuzzyQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFuzzyQuery.h; path = ../S4LuceneLib/dist/Headers/LCFuzzyQuery.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2411FC378A00F094F9 /* LCFuzzyTermEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCFuzzyTermEnum.h; path = ../S4LuceneLib/dist/Headers/LCFuzzyTermEnum.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2511FC378A00F094F9 /* LCHit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCHit.h; path = ../S4LuceneLib/dist/Headers/LCHit.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2611FC378A00F094F9 /* LCHitCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCHitCollector.h; path = ../S4LuceneLib/dist/Headers/LCHitCollector.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2711FC378A00F094F9 /* LCHitIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCHitIterator.h; path = ../S4LuceneLib/dist/Headers/LCHitIterator.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2811FC378A00F094F9 /* LCHitQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCHitQueue.h; path = ../S4LuceneLib/dist/Headers/LCHitQueue.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2911FC378A00F094F9 /* LCHits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCHits.h; path = ../S4LuceneLib/dist/Headers/LCHits.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2A11FC378A00F094F9 /* LCImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCImporter.h; path = ../S4LuceneLib/dist/Headers/LCImporter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2B11FC378A00F094F9 /* LCIndexInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCIndexInput.h; path = ../S4LuceneLib/dist/Headers/LCIndexInput.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2C11FC378A00F094F9 /* LCIndexManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCIndexManager.h; path = ../S4LuceneLib/dist/Headers/LCIndexManager.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2D11FC378A00F094F9 /* LCIndexModifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCIndexModifier.h; path = ../S4LuceneLib/dist/Headers/LCIndexModifier.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2E11FC378A00F094F9 /* LCIndexOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCIndexOutput.h; path = ../S4LuceneLib/dist/Headers/LCIndexOutput.h; sourceTree = SOURCE_ROOT; };
+		0A10EC2F11FC378A00F094F9 /* LCIndexReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCIndexReader.h; path = ../S4LuceneLib/dist/Headers/LCIndexReader.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3011FC378A00F094F9 /* LCIndexSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCIndexSearcher.h; path = ../S4LuceneLib/dist/Headers/LCIndexSearcher.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3111FC378A00F094F9 /* LCIndexWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCIndexWriter.h; path = ../S4LuceneLib/dist/Headers/LCIndexWriter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3211FC378A00F094F9 /* LCLetterTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLetterTokenizer.h; path = ../S4LuceneLib/dist/Headers/LCLetterTokenizer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3311FC378A00F094F9 /* LCLowerCaseFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLowerCaseFilter.h; path = ../S4LuceneLib/dist/Headers/LCLowerCaseFilter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3411FC378A00F094F9 /* LCLowerCaseTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLowerCaseTokenizer.h; path = ../S4LuceneLib/dist/Headers/LCLowerCaseTokenizer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3511FC378A00F094F9 /* LCMetadataAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCMetadataAttribute.h; path = ../S4LuceneLib/dist/Headers/LCMetadataAttribute.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3611FC378A00F094F9 /* LCMMapDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCMMapDirectory.h; path = ../S4LuceneLib/dist/Headers/LCMMapDirectory.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3711FC378A00F094F9 /* LCMultiPhraseQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCMultiPhraseQuery.h; path = ../S4LuceneLib/dist/Headers/LCMultiPhraseQuery.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3811FC378A00F094F9 /* LCMultipleTermPositions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCMultipleTermPositions.h; path = ../S4LuceneLib/dist/Headers/LCMultipleTermPositions.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3911FC378A00F094F9 /* LCMultiReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCMultiReader.h; path = ../S4LuceneLib/dist/Headers/LCMultiReader.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3A11FC378A00F094F9 /* LCMultiSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCMultiSearcher.h; path = ../S4LuceneLib/dist/Headers/LCMultiSearcher.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3B11FC378A00F094F9 /* LCMultiTermQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCMultiTermQuery.h; path = ../S4LuceneLib/dist/Headers/LCMultiTermQuery.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3C11FC378A00F094F9 /* LCNonMatchingScorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCNonMatchingScorer.h; path = ../S4LuceneLib/dist/Headers/LCNonMatchingScorer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3D11FC378A00F094F9 /* LCNumberTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCNumberTools.h; path = ../S4LuceneLib/dist/Headers/LCNumberTools.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3E11FC378A00F094F9 /* LCPerFieldAnalyzerWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCPerFieldAnalyzerWrapper.h; path = ../S4LuceneLib/dist/Headers/LCPerFieldAnalyzerWrapper.h; sourceTree = SOURCE_ROOT; };
+		0A10EC3F11FC378A00F094F9 /* LCPhrasePositions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCPhrasePositions.h; path = ../S4LuceneLib/dist/Headers/LCPhrasePositions.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4011FC378A00F094F9 /* LCPhrasePrefixQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCPhrasePrefixQuery.h; path = ../S4LuceneLib/dist/Headers/LCPhrasePrefixQuery.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4111FC378A00F094F9 /* LCPhraseQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCPhraseQuery.h; path = ../S4LuceneLib/dist/Headers/LCPhraseQuery.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4211FC378A00F094F9 /* LCPhraseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCPhraseQueue.h; path = ../S4LuceneLib/dist/Headers/LCPhraseQueue.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4311FC378A00F094F9 /* LCPhraseScorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCPhraseScorer.h; path = ../S4LuceneLib/dist/Headers/LCPhraseScorer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4411FC378A00F094F9 /* LCPorterStemFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCPorterStemFilter.h; path = ../S4LuceneLib/dist/Headers/LCPorterStemFilter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4511FC378A00F094F9 /* LCPrefixQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCPrefixQuery.h; path = ../S4LuceneLib/dist/Headers/LCPrefixQuery.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4611FC378A00F094F9 /* LCPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCPriorityQueue.h; path = ../S4LuceneLib/dist/Headers/LCPriorityQueue.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4711FC378A00F094F9 /* LCQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCQuery.h; path = ../S4LuceneLib/dist/Headers/LCQuery.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4811FC378A00F094F9 /* LCQueryFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCQueryFilter.h; path = ../S4LuceneLib/dist/Headers/LCQueryFilter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4911FC378A00F094F9 /* LCQueryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCQueryParser.h; path = ../S4LuceneLib/dist/Headers/LCQueryParser.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4A11FC378A00F094F9 /* LCQueryTermVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCQueryTermVector.h; path = ../S4LuceneLib/dist/Headers/LCQueryTermVector.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4B11FC378A00F094F9 /* LCRAMDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCRAMDirectory.h; path = ../S4LuceneLib/dist/Headers/LCRAMDirectory.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4C11FC378A00F094F9 /* LCRAMFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCRAMFile.h; path = ../S4LuceneLib/dist/Headers/LCRAMFile.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4D11FC378A00F094F9 /* LCRAMInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCRAMInputStream.h; path = ../S4LuceneLib/dist/Headers/LCRAMInputStream.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4E11FC378A00F094F9 /* LCRAMOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCRAMOutputStream.h; path = ../S4LuceneLib/dist/Headers/LCRAMOutputStream.h; sourceTree = SOURCE_ROOT; };
+		0A10EC4F11FC378A00F094F9 /* LCRangeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCRangeFilter.h; path = ../S4LuceneLib/dist/Headers/LCRangeFilter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5011FC378A00F094F9 /* LCRangeQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCRangeQuery.h; path = ../S4LuceneLib/dist/Headers/LCRangeQuery.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5111FC378A00F094F9 /* LCReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCReader.h; path = ../S4LuceneLib/dist/Headers/LCReader.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5211FC378A00F094F9 /* LCReqExclScorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCReqExclScorer.h; path = ../S4LuceneLib/dist/Headers/LCReqExclScorer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5311FC378A00F094F9 /* LCReqOptSumScorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCReqOptSumScorer.h; path = ../S4LuceneLib/dist/Headers/LCReqOptSumScorer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5411FC378A00F094F9 /* LCScoreDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCScoreDoc.h; path = ../S4LuceneLib/dist/Headers/LCScoreDoc.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5511FC378A00F094F9 /* LCScoreDocComparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCScoreDocComparator.h; path = ../S4LuceneLib/dist/Headers/LCScoreDocComparator.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5611FC378A00F094F9 /* LCScorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCScorer.h; path = ../S4LuceneLib/dist/Headers/LCScorer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5711FC378A00F094F9 /* LCSearchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSearchable.h; path = ../S4LuceneLib/dist/Headers/LCSearchable.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5811FC378A00F094F9 /* LCSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSearcher.h; path = ../S4LuceneLib/dist/Headers/LCSearcher.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5911FC378A00F094F9 /* LCSegmentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSegmentInfo.h; path = ../S4LuceneLib/dist/Headers/LCSegmentInfo.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5A11FC378A00F094F9 /* LCSegmentInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSegmentInfos.h; path = ../S4LuceneLib/dist/Headers/LCSegmentInfos.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5B11FC378A00F094F9 /* LCSegmentMergeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSegmentMergeInfo.h; path = ../S4LuceneLib/dist/Headers/LCSegmentMergeInfo.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5C11FC378A00F094F9 /* LCSegmentMergeQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSegmentMergeQueue.h; path = ../S4LuceneLib/dist/Headers/LCSegmentMergeQueue.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5D11FC378A00F094F9 /* LCSegmentMerger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSegmentMerger.h; path = ../S4LuceneLib/dist/Headers/LCSegmentMerger.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5E11FC378A00F094F9 /* LCSegmentReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSegmentReader.h; path = ../S4LuceneLib/dist/Headers/LCSegmentReader.h; sourceTree = SOURCE_ROOT; };
+		0A10EC5F11FC378A00F094F9 /* LCSegmentTermDocs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSegmentTermDocs.h; path = ../S4LuceneLib/dist/Headers/LCSegmentTermDocs.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6011FC378A00F094F9 /* LCSegmentTermEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSegmentTermEnum.h; path = ../S4LuceneLib/dist/Headers/LCSegmentTermEnum.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6111FC378A00F094F9 /* LCSegmentTermPositions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSegmentTermPositions.h; path = ../S4LuceneLib/dist/Headers/LCSegmentTermPositions.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6211FC378A00F094F9 /* LCSegmentTermPositionVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSegmentTermPositionVector.h; path = ../S4LuceneLib/dist/Headers/LCSegmentTermPositionVector.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6311FC378A00F094F9 /* LCSegmentTermVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSegmentTermVector.h; path = ../S4LuceneLib/dist/Headers/LCSegmentTermVector.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6411FC378A00F094F9 /* LCSimilarity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSimilarity.h; path = ../S4LuceneLib/dist/Headers/LCSimilarity.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6511FC378A00F094F9 /* LCSimilarityDelegator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSimilarityDelegator.h; path = ../S4LuceneLib/dist/Headers/LCSimilarityDelegator.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6611FC378A00F094F9 /* LCSimpleAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSimpleAnalyzer.h; path = ../S4LuceneLib/dist/Headers/LCSimpleAnalyzer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6711FC378A00F094F9 /* LCSmallFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSmallFloat.h; path = ../S4LuceneLib/dist/Headers/LCSmallFloat.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6811FC378A00F094F9 /* LCSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSort.h; path = ../S4LuceneLib/dist/Headers/LCSort.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6911FC378A00F094F9 /* LCSortComparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSortComparator.h; path = ../S4LuceneLib/dist/Headers/LCSortComparator.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6A11FC378A00F094F9 /* LCSortComparatorSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSortComparatorSource.h; path = ../S4LuceneLib/dist/Headers/LCSortComparatorSource.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6B11FC378A00F094F9 /* LCSortField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCSortField.h; path = ../S4LuceneLib/dist/Headers/LCSortField.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6C11FC378A00F094F9 /* LCStopAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCStopAnalyzer.h; path = ../S4LuceneLib/dist/Headers/LCStopAnalyzer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6D11FC378A00F094F9 /* LCStopFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCStopFilter.h; path = ../S4LuceneLib/dist/Headers/LCStopFilter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6E11FC378A00F094F9 /* LCStringReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCStringReader.h; path = ../S4LuceneLib/dist/Headers/LCStringReader.h; sourceTree = SOURCE_ROOT; };
+		0A10EC6F11FC378A00F094F9 /* LCTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTerm.h; path = ../S4LuceneLib/dist/Headers/LCTerm.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7011FC378A00F094F9 /* LCTermBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermBuffer.h; path = ../S4LuceneLib/dist/Headers/LCTermBuffer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7111FC378A00F094F9 /* LCTermDocs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermDocs.h; path = ../S4LuceneLib/dist/Headers/LCTermDocs.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7211FC378A00F094F9 /* LCTermEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermEnum.h; path = ../S4LuceneLib/dist/Headers/LCTermEnum.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7311FC378A00F094F9 /* LCTermFreqVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermFreqVector.h; path = ../S4LuceneLib/dist/Headers/LCTermFreqVector.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7411FC378A00F094F9 /* LCTermInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermInfo.h; path = ../S4LuceneLib/dist/Headers/LCTermInfo.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7511FC378A00F094F9 /* LCTermInfosReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermInfosReader.h; path = ../S4LuceneLib/dist/Headers/LCTermInfosReader.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7611FC378A00F094F9 /* LCTermInfosWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermInfosWriter.h; path = ../S4LuceneLib/dist/Headers/LCTermInfosWriter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7711FC378A00F094F9 /* LCTermPositions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermPositions.h; path = ../S4LuceneLib/dist/Headers/LCTermPositions.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7811FC378A00F094F9 /* LCTermPositionVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermPositionVector.h; path = ../S4LuceneLib/dist/Headers/LCTermPositionVector.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7911FC378A00F094F9 /* LCTermQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermQuery.h; path = ../S4LuceneLib/dist/Headers/LCTermQuery.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7A11FC378A00F094F9 /* LCTermScorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermScorer.h; path = ../S4LuceneLib/dist/Headers/LCTermScorer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7B11FC378A00F094F9 /* LCTermVectorOffsetInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermVectorOffsetInfo.h; path = ../S4LuceneLib/dist/Headers/LCTermVectorOffsetInfo.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7C11FC378A00F094F9 /* LCTermVectorsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermVectorsReader.h; path = ../S4LuceneLib/dist/Headers/LCTermVectorsReader.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7D11FC378A00F094F9 /* LCTermVectorsWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTermVectorsWriter.h; path = ../S4LuceneLib/dist/Headers/LCTermVectorsWriter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7E11FC378A00F094F9 /* LCTextImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTextImporter.h; path = ../S4LuceneLib/dist/Headers/LCTextImporter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC7F11FC378A00F094F9 /* LCToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCToken.h; path = ../S4LuceneLib/dist/Headers/LCToken.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8011FC378A00F094F9 /* LCTokenFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTokenFilter.h; path = ../S4LuceneLib/dist/Headers/LCTokenFilter.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8111FC378A00F094F9 /* LCTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTokenizer.h; path = ../S4LuceneLib/dist/Headers/LCTokenizer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8211FC378A00F094F9 /* LCTokenStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTokenStream.h; path = ../S4LuceneLib/dist/Headers/LCTokenStream.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8311FC378A00F094F9 /* LCTopDocCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTopDocCollector.h; path = ../S4LuceneLib/dist/Headers/LCTopDocCollector.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8411FC378A00F094F9 /* LCTopDocs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTopDocs.h; path = ../S4LuceneLib/dist/Headers/LCTopDocs.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8511FC378A00F094F9 /* LCTopFieldDocCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTopFieldDocCollector.h; path = ../S4LuceneLib/dist/Headers/LCTopFieldDocCollector.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8611FC378A00F094F9 /* LCTopFieldDocs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCTopFieldDocs.h; path = ../S4LuceneLib/dist/Headers/LCTopFieldDocs.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8711FC378A00F094F9 /* LCWeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCWeight.h; path = ../S4LuceneLib/dist/Headers/LCWeight.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8811FC378A00F094F9 /* LCWhitespaceAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCWhitespaceAnalyzer.h; path = ../S4LuceneLib/dist/Headers/LCWhitespaceAnalyzer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8911FC378A00F094F9 /* LCWhitespaceTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCWhitespaceTokenizer.h; path = ../S4LuceneLib/dist/Headers/LCWhitespaceTokenizer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8A11FC378A00F094F9 /* LCWildcardQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCWildcardQuery.h; path = ../S4LuceneLib/dist/Headers/LCWildcardQuery.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8B11FC378A00F094F9 /* LCWildcardTermEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCWildcardTermEnum.h; path = ../S4LuceneLib/dist/Headers/LCWildcardTermEnum.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8C11FC378A00F094F9 /* LCWordlistLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCWordlistLoader.h; path = ../S4LuceneLib/dist/Headers/LCWordlistLoader.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8D11FC378A00F094F9 /* LuceneKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LuceneKit.h; path = ../S4LuceneLib/dist/Headers/LuceneKit.h; sourceTree = SOURCE_ROOT; };
+		0A10EC8E11FC378A00F094F9 /* NSData+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Additions.h"; path = "../S4LuceneLib/dist/Headers/NSData+Additions.h"; sourceTree = SOURCE_ROOT; };
+		0A10EC8F11FC378A00F094F9 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../S4LuceneLib/dist/Headers/NSString+Additions.h"; sourceTree = SOURCE_ROOT; };
+		0A10EC9011FC378A00F094F9 /* PorterStemmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PorterStemmer.h; path = ../S4LuceneLib/dist/Headers/PorterStemmer.h; sourceTree = SOURCE_ROOT; };
+		0A10EC9111FC378A00F094F9 /* QueryHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryHandler.h; path = ../S4LuceneLib/dist/Headers/QueryHandler.h; sourceTree = SOURCE_ROOT; };
+		0A10EC9211FC378A00F094F9 /* QueryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryParser.h; path = ../S4LuceneLib/dist/Headers/QueryParser.h; sourceTree = SOURCE_ROOT; };
+		0A10EC9311FC378A00F094F9 /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Search.h; path = ../S4LuceneLib/dist/Headers/Search.h; sourceTree = SOURCE_ROOT; };
+		0A10EC9411FC378A00F094F9 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Store.h; path = ../S4LuceneLib/dist/Headers/Store.h; sourceTree = SOURCE_ROOT; };
+		0A10EC9511FC378A00F094F9 /* TokenHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TokenHandler.h; path = ../S4LuceneLib/dist/Headers/TokenHandler.h; sourceTree = SOURCE_ROOT; };
+		0A10EC9611FC378A00F094F9 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Util.h; path = ../S4LuceneLib/dist/Headers/Util.h; sourceTree = SOURCE_ROOT; };
+		0A10ECAE11FC389E00F094F9 /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = data.txt; path = Resources/data.txt; sourceTree = "<group>"; };
+		0A10ECBB11FC394B00F094F9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0A10ECBD11FC394B00F094F9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0A10ECBF11FC394B00F094F9 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0A10ECC111FC394B00F094F9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		0A10ECC311FC394B00F094F9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		0A10ECC511FC394B00F094F9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0A10ECC711FC394B00F094F9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0A10ECC911FC394B00F094F9 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		0A10ECCB11FC394B00F094F9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		0A87AA15123869250094AAED /* NSCollections+S4Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCollections+S4Utilities.h"; sourceTree = "<group>"; };
+		0A87AA16123869250094AAED /* NSInvocation+S4Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+S4Utilities.h"; sourceTree = "<group>"; };
+		0A87AA17123869250094AAED /* NSObject+S4Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+S4Utilities.h"; sourceTree = "<group>"; };
+		0A87AA18123869250094AAED /* NSString+S4Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+S4Utilities.h"; sourceTree = "<group>"; };
+		0A87AA19123869250094AAED /* S4AbstractAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4AbstractAppDelegate.h; sourceTree = "<group>"; };
+		0A87AA1A123869250094AAED /* S4AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4AppUtils.h; sourceTree = "<group>"; };
+		0A87AA1B123869250094AAED /* S4BaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4BaseClass.h; sourceTree = "<group>"; };
+		0A87AA1C123869250094AAED /* S4CommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4CommonDefines.h; sourceTree = "<group>"; };
+		0A87AA1D123869250094AAED /* S4CoreLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4CoreLocationManager.h; sourceTree = "<group>"; };
+		0A87AA1E123869250094AAED /* S4CrashManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4CrashManager.h; sourceTree = "<group>"; };
+		0A87AA1F123869250094AAED /* S4DelgateArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4DelgateArray.h; sourceTree = "<group>"; };
+		0A87AA20123869250094AAED /* S4FileUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4FileUtilities.h; sourceTree = "<group>"; };
+		0A87AA21123869250094AAED /* S4FullScreenMoviePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4FullScreenMoviePlayer.h; sourceTree = "<group>"; };
+		0A87AA22123869250094AAED /* S4GeoLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4GeoLocation.h; sourceTree = "<group>"; };
+		0A87AA23123869250094AAED /* S4HttpConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4HttpConnection.h; sourceTree = "<group>"; };
+		0A87AA24123869250094AAED /* S4HttpInvokeOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4HttpInvokeOperation.h; sourceTree = "<group>"; };
+		0A87AA25123869250094AAED /* S4NetUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4NetUtilities.h; sourceTree = "<group>"; };
+		0A87AA26123869250094AAED /* S4NetworkAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4NetworkAccess.h; sourceTree = "<group>"; };
+		0A87AA27123869250094AAED /* S4ObjC_Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4ObjC_Utilities.h; sourceTree = "<group>"; };
+		0A87AA28123869250094AAED /* S4OperationsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4OperationsHandler.h; sourceTree = "<group>"; };
+		0A87AA29123869250094AAED /* S4OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4OverlayViewController.h; sourceTree = "<group>"; };
+		0A87AA2A123869250094AAED /* S4PdfSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4PdfSearcher.h; sourceTree = "<group>"; };
+		0A87AA2B123869250094AAED /* S4PdfView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4PdfView.h; sourceTree = "<group>"; };
+		0A87AA2C123869250094AAED /* S4RegEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4RegEx.h; sourceTree = "<group>"; };
+		0A87AA2D123869250094AAED /* S4RoundedRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4RoundedRectView.h; sourceTree = "<group>"; };
+		0A87AA2E123869250094AAED /* S4ScreenUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4ScreenUtils.h; sourceTree = "<group>"; };
+		0A87AA2F123869250094AAED /* S4SingletonClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4SingletonClass.h; sourceTree = "<group>"; };
+		0A87AA30123869250094AAED /* S4SystemUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4SystemUtilities.h; sourceTree = "<group>"; };
+		0A87AA31123869250094AAED /* S4TextUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4TextUtils.h; sourceTree = "<group>"; };
+		0A87AA32123869250094AAED /* S4UIDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4UIDeviceManager.h; sourceTree = "<group>"; };
+		0A87AA33123869250094AAED /* S4UserDefaultsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4UserDefaultsManager.h; sourceTree = "<group>"; };
+		0A87AA34123869250094AAED /* S4WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4WebViewController.h; sourceTree = "<group>"; };
+		0A87AA35123869250094AAED /* S4XMLToDictionaryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S4XMLToDictionaryParser.h; sourceTree = "<group>"; };
+		0A87AA36123869250094AAED /* UIColor+S4Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+S4Utilities.h"; sourceTree = "<group>"; };
+		0A87AA37123869250094AAED /* libS4iOSLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libS4iOSLib.a; path = ../../S4iOSLibrary/S4iOSLib/dist/libS4iOSLib.a; sourceTree = SOURCE_ROOT; };
+		0A87AA39123869250094AAED /* ico_arrowleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_arrowleft.png; sourceTree = "<group>"; };
+		0A87AA3A123869250094AAED /* ico_arrowright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_arrowright.png; sourceTree = "<group>"; };
+		0A87AA3B123869250094AAED /* ico_refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_refresh.png; sourceTree = "<group>"; };
+		0A87AAD7123869250094AAED /* S4WebView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = S4WebView.xib; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* iPhoneLuceneSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneLuceneSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* iPhoneLuceneSearch_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneLuceneSearch_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D2F5E510EDB2CC3002CF2D6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9D2F5E520EDB2CC3002CF2D6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				0A10EBF611FC376C00F094F9 /* libS4LuceneLib.a in Frameworks */,
+				0A10ECBC11FC394B00F094F9 /* CoreLocation.framework in Frameworks */,
+				0A10ECBE11FC394B00F094F9 /* MapKit.framework in Frameworks */,
+				0A10ECC011FC394B00F094F9 /* MediaPlayer.framework in Frameworks */,
+				0A10ECC211FC394B00F094F9 /* MessageUI.framework in Frameworks */,
+				0A10ECC411FC394B00F094F9 /* OpenGLES.framework in Frameworks */,
+				0A10ECC611FC394B00F094F9 /* Security.framework in Frameworks */,
+				0A10ECC811FC394B00F094F9 /* SystemConfiguration.framework in Frameworks */,
+				0A10ECCA11FC394B00F094F9 /* libxml2.dylib in Frameworks */,
+				0A10ECCC11FC394B00F094F9 /* libz.dylib in Frameworks */,
+				0A87AAD8123869250094AAED /* libS4iOSLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9D2F5E510EDB2CC3002CF2D6 /* AppDelegate.h */,
+				9D2F5E520EDB2CC3002CF2D6 /* AppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0A10EBF211FC374900F094F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A10EBF311FC375E00F094F9 /* Lucene.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0A10EBF711FC377100F094F9 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				0A10EBF811FC378A00F094F9 /* Analysis.h */,
+				0A10EBF911FC378A00F094F9 /* CodeHandler.h */,
+				0A10EBFA11FC378A00F094F9 /* CodeParser.h */,
+				0A10EBFB11FC378A00F094F9 /* Document.h */,
+				0A10EBFC11FC378A00F094F9 /* GNUstep.h */,
+				0A10EBFD11FC378A00F094F9 /* Index.h */,
+				0A10EBFE11FC378A00F094F9 /* Java.h */,
+				0A10EBFF11FC378A00F094F9 /* LCAnalyzer.h */,
+				0A10EC0011FC378A00F094F9 /* LCBitVector.h */,
+				0A10EC0111FC378A00F094F9 /* LCBooleanClause.h */,
+				0A10EC0211FC378A00F094F9 /* LCBooleanQuery.h */,
+				0A10EC0311FC378A00F094F9 /* LCBooleanScorer.h */,
+				0A10EC0411FC378A00F094F9 /* LCCachingWrapperFilter.h */,
+				0A10EC0511FC378A00F094F9 /* LCCharTokenizer.h */,
+				0A10EC0611FC378A00F094F9 /* LCCompoundFileReader.h */,
+				0A10EC0711FC378A00F094F9 /* LCCompoundFileWriter.h */,
+				0A10EC0811FC378A00F094F9 /* LCConjunctionScorer.h */,
+				0A10EC0911FC378A00F094F9 /* LCDateFilter.h */,
+				0A10EC0A11FC378A00F094F9 /* LCDateTools.h */,
+				0A10EC0B11FC378A00F094F9 /* LCDefaultSimilarity.h */,
+				0A10EC0C11FC378A00F094F9 /* LCDirectory.h */,
+				0A10EC0D11FC378A00F094F9 /* LCDisjunctionSumScorer.h */,
+				0A10EC0E11FC378A00F094F9 /* LCDocument.h */,
+				0A10EC0F11FC378A00F094F9 /* LCDocumentWriter.h */,
+				0A10EC1011FC378A00F094F9 /* LCExactPhraseScorer.h */,
+				0A10EC1111FC378A00F094F9 /* LCExplanation.h */,
+				0A10EC1211FC378A00F094F9 /* LCField.h */,
+				0A10EC1311FC378A00F094F9 /* LCFieldCache.h */,
+				0A10EC1411FC378A00F094F9 /* LCFieldCacheImpl.h */,
+				0A10EC1511FC378A00F094F9 /* LCFieldDoc.h */,
+				0A10EC1611FC378A00F094F9 /* LCFieldDocSortedHitQueue.h */,
+				0A10EC1711FC378A00F094F9 /* LCFieldInfo.h */,
+				0A10EC1811FC378A00F094F9 /* LCFieldInfos.h */,
+				0A10EC1911FC378A00F094F9 /* LCFieldSortedHitQueue.h */,
+				0A10EC1A11FC378A00F094F9 /* LCFieldsReader.h */,
+				0A10EC1B11FC378A00F094F9 /* LCFieldsWriter.h */,
+				0A10EC1C11FC378A00F094F9 /* LCFilter.h */,
+				0A10EC1D11FC378A00F094F9 /* LCFilteredQuery.h */,
+				0A10EC1E11FC378A00F094F9 /* LCFilteredTermEnum.h */,
+				0A10EC1F11FC378A00F094F9 /* LCFilterIndexReader.h */,
+				0A10EC2011FC378A00F094F9 /* LCFSDirectory.h */,
+				0A10EC2111FC378A00F094F9 /* LCFSIndexInput.h */,
+				0A10EC2211FC378A00F094F9 /* LCFSIndexOutput.h */,
+				0A10EC2311FC378A00F094F9 /* LCFuzzyQuery.h */,
+				0A10EC2411FC378A00F094F9 /* LCFuzzyTermEnum.h */,
+				0A10EC2511FC378A00F094F9 /* LCHit.h */,
+				0A10EC2611FC378A00F094F9 /* LCHitCollector.h */,
+				0A10EC2711FC378A00F094F9 /* LCHitIterator.h */,
+				0A10EC2811FC378A00F094F9 /* LCHitQueue.h */,
+				0A10EC2911FC378A00F094F9 /* LCHits.h */,
+				0A10EC2A11FC378A00F094F9 /* LCImporter.h */,
+				0A10EC2B11FC378A00F094F9 /* LCIndexInput.h */,
+				0A10EC2C11FC378A00F094F9 /* LCIndexManager.h */,
+				0A10EC2D11FC378A00F094F9 /* LCIndexModifier.h */,
+				0A10EC2E11FC378A00F094F9 /* LCIndexOutput.h */,
+				0A10EC2F11FC378A00F094F9 /* LCIndexReader.h */,
+				0A10EC3011FC378A00F094F9 /* LCIndexSearcher.h */,
+				0A10EC3111FC378A00F094F9 /* LCIndexWriter.h */,
+				0A10EC3211FC378A00F094F9 /* LCLetterTokenizer.h */,
+				0A10EC3311FC378A00F094F9 /* LCLowerCaseFilter.h */,
+				0A10EC3411FC378A00F094F9 /* LCLowerCaseTokenizer.h */,
+				0A10EC3511FC378A00F094F9 /* LCMetadataAttribute.h */,
+				0A10EC3611FC378A00F094F9 /* LCMMapDirectory.h */,
+				0A10EC3711FC378A00F094F9 /* LCMultiPhraseQuery.h */,
+				0A10EC3811FC378A00F094F9 /* LCMultipleTermPositions.h */,
+				0A10EC3911FC378A00F094F9 /* LCMultiReader.h */,
+				0A10EC3A11FC378A00F094F9 /* LCMultiSearcher.h */,
+				0A10EC3B11FC378A00F094F9 /* LCMultiTermQuery.h */,
+				0A10EC3C11FC378A00F094F9 /* LCNonMatchingScorer.h */,
+				0A10EC3D11FC378A00F094F9 /* LCNumberTools.h */,
+				0A10EC3E11FC378A00F094F9 /* LCPerFieldAnalyzerWrapper.h */,
+				0A10EC3F11FC378A00F094F9 /* LCPhrasePositions.h */,
+				0A10EC4011FC378A00F094F9 /* LCPhrasePrefixQuery.h */,
+				0A10EC4111FC378A00F094F9 /* LCPhraseQuery.h */,
+				0A10EC4211FC378A00F094F9 /* LCPhraseQueue.h */,
+				0A10EC4311FC378A00F094F9 /* LCPhraseScorer.h */,
+				0A10EC4411FC378A00F094F9 /* LCPorterStemFilter.h */,
+				0A10EC4511FC378A00F094F9 /* LCPrefixQuery.h */,
+				0A10EC4611FC378A00F094F9 /* LCPriorityQueue.h */,
+				0A10EC4711FC378A00F094F9 /* LCQuery.h */,
+				0A10EC4811FC378A00F094F9 /* LCQueryFilter.h */,
+				0A10EC4911FC378A00F094F9 /* LCQueryParser.h */,
+				0A10EC4A11FC378A00F094F9 /* LCQueryTermVector.h */,
+				0A10EC4B11FC378A00F094F9 /* LCRAMDirectory.h */,
+				0A10EC4C11FC378A00F094F9 /* LCRAMFile.h */,
+				0A10EC4D11FC378A00F094F9 /* LCRAMInputStream.h */,
+				0A10EC4E11FC378A00F094F9 /* LCRAMOutputStream.h */,
+				0A10EC4F11FC378A00F094F9 /* LCRangeFilter.h */,
+				0A10EC5011FC378A00F094F9 /* LCRangeQuery.h */,
+				0A10EC5111FC378A00F094F9 /* LCReader.h */,
+				0A10EC5211FC378A00F094F9 /* LCReqExclScorer.h */,
+				0A10EC5311FC378A00F094F9 /* LCReqOptSumScorer.h */,
+				0A10EC5411FC378A00F094F9 /* LCScoreDoc.h */,
+				0A10EC5511FC378A00F094F9 /* LCScoreDocComparator.h */,
+				0A10EC5611FC378A00F094F9 /* LCScorer.h */,
+				0A10EC5711FC378A00F094F9 /* LCSearchable.h */,
+				0A10EC5811FC378A00F094F9 /* LCSearcher.h */,
+				0A10EC5911FC378A00F094F9 /* LCSegmentInfo.h */,
+				0A10EC5A11FC378A00F094F9 /* LCSegmentInfos.h */,
+				0A10EC5B11FC378A00F094F9 /* LCSegmentMergeInfo.h */,
+				0A10EC5C11FC378A00F094F9 /* LCSegmentMergeQueue.h */,
+				0A10EC5D11FC378A00F094F9 /* LCSegmentMerger.h */,
+				0A10EC5E11FC378A00F094F9 /* LCSegmentReader.h */,
+				0A10EC5F11FC378A00F094F9 /* LCSegmentTermDocs.h */,
+				0A10EC6011FC378A00F094F9 /* LCSegmentTermEnum.h */,
+				0A10EC6111FC378A00F094F9 /* LCSegmentTermPositions.h */,
+				0A10EC6211FC378A00F094F9 /* LCSegmentTermPositionVector.h */,
+				0A10EC6311FC378A00F094F9 /* LCSegmentTermVector.h */,
+				0A10EC6411FC378A00F094F9 /* LCSimilarity.h */,
+				0A10EC6511FC378A00F094F9 /* LCSimilarityDelegator.h */,
+				0A10EC6611FC378A00F094F9 /* LCSimpleAnalyzer.h */,
+				0A10EC6711FC378A00F094F9 /* LCSmallFloat.h */,
+				0A10EC6811FC378A00F094F9 /* LCSort.h */,
+				0A10EC6911FC378A00F094F9 /* LCSortComparator.h */,
+				0A10EC6A11FC378A00F094F9 /* LCSortComparatorSource.h */,
+				0A10EC6B11FC378A00F094F9 /* LCSortField.h */,
+				0A10EC6C11FC378A00F094F9 /* LCStopAnalyzer.h */,
+				0A10EC6D11FC378A00F094F9 /* LCStopFilter.h */,
+				0A10EC6E11FC378A00F094F9 /* LCStringReader.h */,
+				0A10EC6F11FC378A00F094F9 /* LCTerm.h */,
+				0A10EC7011FC378A00F094F9 /* LCTermBuffer.h */,
+				0A10EC7111FC378A00F094F9 /* LCTermDocs.h */,
+				0A10EC7211FC378A00F094F9 /* LCTermEnum.h */,
+				0A10EC7311FC378A00F094F9 /* LCTermFreqVector.h */,
+				0A10EC7411FC378A00F094F9 /* LCTermInfo.h */,
+				0A10EC7511FC378A00F094F9 /* LCTermInfosReader.h */,
+				0A10EC7611FC378A00F094F9 /* LCTermInfosWriter.h */,
+				0A10EC7711FC378A00F094F9 /* LCTermPositions.h */,
+				0A10EC7811FC378A00F094F9 /* LCTermPositionVector.h */,
+				0A10EC7911FC378A00F094F9 /* LCTermQuery.h */,
+				0A10EC7A11FC378A00F094F9 /* LCTermScorer.h */,
+				0A10EC7B11FC378A00F094F9 /* LCTermVectorOffsetInfo.h */,
+				0A10EC7C11FC378A00F094F9 /* LCTermVectorsReader.h */,
+				0A10EC7D11FC378A00F094F9 /* LCTermVectorsWriter.h */,
+				0A10EC7E11FC378A00F094F9 /* LCTextImporter.h */,
+				0A10EC7F11FC378A00F094F9 /* LCToken.h */,
+				0A10EC8011FC378A00F094F9 /* LCTokenFilter.h */,
+				0A10EC8111FC378A00F094F9 /* LCTokenizer.h */,
+				0A10EC8211FC378A00F094F9 /* LCTokenStream.h */,
+				0A10EC8311FC378A00F094F9 /* LCTopDocCollector.h */,
+				0A10EC8411FC378A00F094F9 /* LCTopDocs.h */,
+				0A10EC8511FC378A00F094F9 /* LCTopFieldDocCollector.h */,
+				0A10EC8611FC378A00F094F9 /* LCTopFieldDocs.h */,
+				0A10EC8711FC378A00F094F9 /* LCWeight.h */,
+				0A10EC8811FC378A00F094F9 /* LCWhitespaceAnalyzer.h */,
+				0A10EC8911FC378A00F094F9 /* LCWhitespaceTokenizer.h */,
+				0A10EC8A11FC378A00F094F9 /* LCWildcardQuery.h */,
+				0A10EC8B11FC378A00F094F9 /* LCWildcardTermEnum.h */,
+				0A10EC8C11FC378A00F094F9 /* LCWordlistLoader.h */,
+				0A10EC8D11FC378A00F094F9 /* LuceneKit.h */,
+				0A10EC8E11FC378A00F094F9 /* NSData+Additions.h */,
+				0A10EC8F11FC378A00F094F9 /* NSString+Additions.h */,
+				0A10EC9011FC378A00F094F9 /* PorterStemmer.h */,
+				0A10EC9111FC378A00F094F9 /* QueryHandler.h */,
+				0A10EC9211FC378A00F094F9 /* QueryParser.h */,
+				0A10EC9311FC378A00F094F9 /* Search.h */,
+				0A10EC9411FC378A00F094F9 /* Store.h */,
+				0A10EC9511FC378A00F094F9 /* TokenHandler.h */,
+				0A10EC9611FC378A00F094F9 /* Util.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		0A87AA12123868EB0094AAED /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				0A87AA13123868FB0094AAED /* S4iOSLib */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		0A87AA13123868FB0094AAED /* S4iOSLib */ = {
+			isa = PBXGroup;
+			children = (
+				0A87AA14123869250094AAED /* Headers */,
+				0A87AA37123869250094AAED /* libS4iOSLib.a */,
+				0A87AA38123869250094AAED /* Resources */,
+			);
+			name = S4iOSLib;
+			sourceTree = "<group>";
+		};
+		0A87AA14123869250094AAED /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				0A87AA15123869250094AAED /* NSCollections+S4Utilities.h */,
+				0A87AA16123869250094AAED /* NSInvocation+S4Utilities.h */,
+				0A87AA17123869250094AAED /* NSObject+S4Utilities.h */,
+				0A87AA18123869250094AAED /* NSString+S4Utilities.h */,
+				0A87AA19123869250094AAED /* S4AbstractAppDelegate.h */,
+				0A87AA1A123869250094AAED /* S4AppUtils.h */,
+				0A87AA1B123869250094AAED /* S4BaseClass.h */,
+				0A87AA1C123869250094AAED /* S4CommonDefines.h */,
+				0A87AA1D123869250094AAED /* S4CoreLocationManager.h */,
+				0A87AA1E123869250094AAED /* S4CrashManager.h */,
+				0A87AA1F123869250094AAED /* S4DelgateArray.h */,
+				0A87AA20123869250094AAED /* S4FileUtilities.h */,
+				0A87AA21123869250094AAED /* S4FullScreenMoviePlayer.h */,
+				0A87AA22123869250094AAED /* S4GeoLocation.h */,
+				0A87AA23123869250094AAED /* S4HttpConnection.h */,
+				0A87AA24123869250094AAED /* S4HttpInvokeOperation.h */,
+				0A87AA25123869250094AAED /* S4NetUtilities.h */,
+				0A87AA26123869250094AAED /* S4NetworkAccess.h */,
+				0A87AA27123869250094AAED /* S4ObjC_Utilities.h */,
+				0A87AA28123869250094AAED /* S4OperationsHandler.h */,
+				0A87AA29123869250094AAED /* S4OverlayViewController.h */,
+				0A87AA2A123869250094AAED /* S4PdfSearcher.h */,
+				0A87AA2B123869250094AAED /* S4PdfView.h */,
+				0A87AA2C123869250094AAED /* S4RegEx.h */,
+				0A87AA2D123869250094AAED /* S4RoundedRectView.h */,
+				0A87AA2E123869250094AAED /* S4ScreenUtils.h */,
+				0A87AA2F123869250094AAED /* S4SingletonClass.h */,
+				0A87AA30123869250094AAED /* S4SystemUtilities.h */,
+				0A87AA31123869250094AAED /* S4TextUtils.h */,
+				0A87AA32123869250094AAED /* S4UIDeviceManager.h */,
+				0A87AA33123869250094AAED /* S4UserDefaultsManager.h */,
+				0A87AA34123869250094AAED /* S4WebViewController.h */,
+				0A87AA35123869250094AAED /* S4XMLToDictionaryParser.h */,
+				0A87AA36123869250094AAED /* UIColor+S4Utilities.h */,
+			);
+			name = Headers;
+			path = ../../S4iOSLibrary/S4iOSLib/dist/Headers;
+			sourceTree = SOURCE_ROOT;
+		};
+		0A87AA38123869250094AAED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A87AA39123869250094AAED /* ico_arrowleft.png */,
+				0A87AA3A123869250094AAED /* ico_arrowright.png */,
+				0A87AA3B123869250094AAED /* ico_refresh.png */,
+				0A87AAD7123869250094AAED /* S4WebView.xib */,
+			);
+			name = Resources;
+			path = ../../S4iOSLibrary/S4iOSLib/dist/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* iPhoneLuceneSearch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				9DA80C420ED4C60F00D87A5B /* S4LuceneLib */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				0A87AA12123868EB0094AAED /* Vendor */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* iPhoneLuceneSearch_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A10ECAE11FC389E00F094F9 /* data.txt */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				0A10ECBB11FC394B00F094F9 /* CoreLocation.framework */,
+				0A10ECBD11FC394B00F094F9 /* MapKit.framework */,
+				0A10ECBF11FC394B00F094F9 /* MediaPlayer.framework */,
+				0A10ECC111FC394B00F094F9 /* MessageUI.framework */,
+				0A10ECC311FC394B00F094F9 /* OpenGLES.framework */,
+				0A10ECC511FC394B00F094F9 /* Security.framework */,
+				0A10ECC711FC394B00F094F9 /* SystemConfiguration.framework */,
+				0A10ECC911FC394B00F094F9 /* libxml2.dylib */,
+				0A10ECCB11FC394B00F094F9 /* libz.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DA80C420ED4C60F00D87A5B /* S4LuceneLib */ = {
+			isa = PBXGroup;
+			children = (
+				0A10EBF711FC377100F094F9 /* Headers */,
+				0A10EBF511FC376C00F094F9 /* libS4LuceneLib.a */,
+				0A10EBF211FC374900F094F9 /* Resources */,
+			);
+			name = S4LuceneLib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* iPhoneLuceneSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iPhoneLuceneSearch" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPhoneLuceneSearch;
+			productName = iPhoneLuceneSearch;
+			productReference = 1D6058910D05DD3D006BFB54 /* iPhoneLuceneSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "SeaStones Software";
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPhoneLuceneSearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* iPhoneLuceneSearch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				0A10EBF411FC375E00F094F9 /* Lucene.png in Resources */,
+				0A10ECAF11FC389E00F094F9 /* data.txt in Resources */,
+				0A87AAD9123869260094AAED /* ico_arrowleft.png in Resources */,
+				0A87AADA123869260094AAED /* ico_arrowright.png in Resources */,
+				0A87AADB123869260094AAED /* ico_refresh.png in Resources */,
+				0A87AB76123869260094AAED /* S4WebView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				9D2F5E530EDB2CC3002CF2D6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPhoneLuceneSearch_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../S4LuceneLib/dist\"",
+					"\"$(SRCROOT)/../S4iPhoneLib/dist\"",
+					"\"$(SRCROOT)/../../S4iOSLibrary/S4iOSLib/dist\"",
+				);
+				PRODUCT_NAME = iPhoneLuceneSearch;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPhoneLuceneSearch_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../S4LuceneLib/dist\"",
+					"\"$(SRCROOT)/../S4iPhoneLib/dist\"",
+					"\"$(SRCROOT)/../../S4iOSLibrary/S4iOSLib/dist\"",
+				);
+				PRODUCT_NAME = iPhoneLuceneSearch;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lz",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lz",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iPhoneLuceneSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPhoneLuceneSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
