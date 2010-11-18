@@ -7,8 +7,13 @@
 
 
 @interface LCFSIndexInput (LCPrivate)
-- (void) setClosed: (BOOL) isClosed;
+
+- (void) setClosed: (BOOL)isClosed;
+
 @end
+
+
+
 
 @implementation LCFSIndexInput
 
@@ -45,12 +50,11 @@
 	return b;
 }
 
-- (void) readBytes: (NSMutableData *) b 
-			offset: (int) offset length: (int) len
+- (void) readBytes: (NSMutableData *)b offset: (int)offset length: (int)len
 {
 	if (isClosed)
 	{
-		NSLog(@"Error: %@ is closed");
+		NSLog(@"Error: %@ is closed", self);
 		return;
 	}
 	NSData *d = [handle readDataOfLength: len];
