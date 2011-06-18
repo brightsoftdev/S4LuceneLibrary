@@ -12,3 +12,4 @@ profile
 S4LuceneLib/dist/Headers/*.h
 S4LuceneLib/dist/Resources/Lucene.png
 S4LuceneLib/dist/libS4LuceneLib.a
+iPhoneLuceneSearch/build
