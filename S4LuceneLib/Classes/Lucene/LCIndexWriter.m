@@ -396,6 +396,7 @@ An IndexWriter creates and maintains an index.
 	[segmentInfos addSegmentInfo: AUTORELEASE([[LCSegmentInfo alloc] initWithName: segmentName numberOfDocuments: 1 directory: ramDirectory])];
 	[self maybeMergeSegments];
 	//    }
+	DESTROY(segmentName);
 }
 
 - (int) numberOfSegments
@@ -470,13 +471,12 @@ for search. */
 * <p>After this completes, the index is optimized. </p>
 * <p>The provided IndexReaders are not closed.</p>
 */
-- (void) addIndexesWithReaders: (NSArray *) readers
+- (void)addIndexesWithReaders: (NSArray *)readers
 {
 	[self optimize]; // start with zero or 1 seg
 	
 	NSString *mergedName = [self newSegmentName];
-	LCSegmentMerger *merger = [[LCSegmentMerger alloc] initWithIndexWriter:self
-																	  name: mergedName];
+	LCSegmentMerger *merger = [[LCSegmentMerger alloc] initWithIndexWriter: self name: mergedName];
 	NSMutableArray *segmentsToDelete = [[NSMutableArray alloc] init];
 	LCIndexReader *sReader = nil;
 	if ([segmentInfos numberOfSegments] == 1){ // add existing index, if any
@@ -487,8 +487,10 @@ for search. */
 	
 	int i;
 	for (i = 0; i < [readers count]; i++)      // add new indexes
+	{
 		[merger addIndexReader: [readers objectAtIndex: i]];
-	
+	}
+
 	int docCount = [merger merge];                // merge 'em
 	
 	NSRange r = NSMakeRange(0, [segmentInfos numberOfSegments]);
@@ -513,7 +515,8 @@ for search. */
     }
 #endif
     
-	if (useCompoundFile) {
+	if (useCompoundFile)
+	{
 		NSArray *filesToDelete = [merger createCompoundFile: [mergedName stringByAppendingPathExtension: @"tmp"]];
 #if 0
 		synchronized (directory) { // in- & inter-process sync
@@ -532,6 +535,7 @@ for search. */
 		}
 #endif
 	}
+	DESTROY(mergedName);
 	DESTROY(segmentsToDelete);
 	DESTROY(merger);
 }
@@ -589,12 +593,11 @@ and pushes the merged index onto the top of the segmentInfos stack. */
 	[self mergeSegments: minSegment size: [segmentInfos numberOfSegments]];
 }
 
-- (void) mergeSegments: (int) minSegment size: (int) end
+- (void)mergeSegments: (int)minSegment size: (int)end
 {
 	NSString *mergedName = [self newSegmentName];
 	//    if (infoStream != nil) infoStream.print("merging segments");
-	LCSegmentMerger *merger = [[LCSegmentMerger alloc] initWithIndexWriter: self
-																	  name: mergedName];
+	LCSegmentMerger *merger = [[LCSegmentMerger alloc] initWithIndexWriter: self name: mergedName];
 	
 	NSMutableArray *segmentsToDelete = [[NSMutableArray alloc] init];
 	int i;
@@ -654,6 +657,7 @@ and pushes the merged index onto the top of the segmentInfos stack. */
 #endif
 		DESTROY(filesToDelete);
 	}
+	DESTROY(mergedName);
 	DESTROY(segmentsToDelete);
 	DESTROY(merger);
 }

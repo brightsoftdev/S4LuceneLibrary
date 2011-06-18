@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A21371D13AD3E2E00E14101 /* SFHFKeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A21371C13AD3E2E00E14101 /* SFHFKeychainUtils.h */; };
 		0A3BC44111FC299C001D4BCA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3BC44011FC299C001D4BCA /* CoreFoundation.framework */; };
 		0A3BC44311FC299C001D4BCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3BC44211FC299C001D4BCA /* UIKit.framework */; };
 		0A3BC44511FC299C001D4BCA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3BC44411FC299C001D4BCA /* libz.dylib */; };
@@ -328,6 +329,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A21371C13AD3E2E00E14101 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFHFKeychainUtils.h; path = ../../S4iOSLibraries/S4iOSLib/dist/Headers/SFHFKeychainUtils.h; sourceTree = SOURCE_ROOT; };
 		0A3BC44011FC299C001D4BCA /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		0A3BC44211FC299C001D4BCA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A3BC44411FC299C001D4BCA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -1007,6 +1009,7 @@
 		0A87A966123863AF0094AAED /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				0A21371C13AD3E2E00E14101 /* SFHFKeychainUtils.h */,
 				0A87A96D123863C30094AAED /* S4iOSLib */,
 			);
 			name = Vendor;
@@ -1261,6 +1264,7 @@
 				0AA59D7C1294AD4600C3ACDE /* S4UserDefaultsManager.h in Headers */,
 				0AA59D7D1294AD4600C3ACDE /* S4XMLToDictionaryParser.h in Headers */,
 				0AA59D7E1294AD4600C3ACDE /* sha1.h in Headers */,
+				0A21371D13AD3E2E00E14101 /* SFHFKeychainUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1326,7 +1330,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -e \"dist/libS4LuceneLib.a\" ] ; then\n  rm dist/libS4LuceneLib.a\nfi\n\nif [ -e \"dist/Headers/Analysis.h\" ] ; then\n  rm dist/Headers/*.h\nfi\n\nif [ -e \"dist/Resources/Lucene.png\" ] ; then\n  rm dist/Resources/*.png\nfi\n\nif [ -e \"dist/Resources/S4WebView.xib\" ] ; then\n  rm dist/Resources/*.xib\nfi\n";
+			shellScript = "if [ -e \"${PROJECT_DIR}/dist/libS4LuceneLib.a\" ] ; then\n  rm ${PROJECT_DIR}/dist/libS4LuceneLib.a\nfi\n\nif [ -e \"${PROJECT_DIR}/dist/Headers/Analysis.h\" ] ; then\n  rm ${PROJECT_DIR}/dist/Headers/*.h\nfi\n\nif [ -e \"${PROJECT_DIR}/dist/Resources/Lucene.png\" ] ; then\n  rm ${PROJECT_DIR}/dist/Resources/*.png\nfi\n\nif [ -e \"${PROJECT_DIR}/dist/Resources/S4WebView.xib\" ] ; then\n  rm ${PROJECT_DIR}/dist/Resources/*.xib\nfi\n";
 		};
 		0A3BC68A11FC2BCE001D4BCA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1339,7 +1343,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -e \"build/Release-iphoneos/libS4LuceneLib.a\" ] ; then\n\tif [ -e \"build/Debug-iphonesimulator/libS4LuceneLib.a\" ] ; then\n\t\tlipo -create \"build/Release-iphoneos/libS4LuceneLib.a\" \"build/Debug-iphonesimulator/libS4LuceneLib.a\" -output \"dist/libS4LuceneLib.a\"\n\t\tcp Classes/Lucene/*.h dist/Headers/\n\t\tcp Resources/* dist/Resources\n\tfi\nfi\n";
+			shellScript = "if [ -e \"${BUILT_PRODUCTS_DIR}/../Release-iphoneos/libS4LuceneLib.a\" ] ; then\n\tif [ -e \"${BUILT_PRODUCTS_DIR}/../Debug-iphonesimulator/libS4LuceneLib.a\" ] ; then\n\t\tlipo -create \"${BUILT_PRODUCTS_DIR}/../Release-iphoneos/libS4LuceneLib.a\" \"${BUILT_PRODUCTS_DIR}/../Debug-iphonesimulator/libS4LuceneLib.a\" -output \"${PROJECT_DIR}/dist/libS4LuceneLib.a\"\n\t\tcp ${PROJECT_DIR}/Classes/Lucene/*.h ${PROJECT_DIR}/dist/Headers/\n\t\tcp ${PROJECT_DIR}/Resources/* ${PROJECT_DIR}/dist/Resources\n\tfi\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

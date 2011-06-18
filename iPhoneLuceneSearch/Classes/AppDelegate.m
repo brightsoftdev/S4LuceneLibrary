@@ -1,4 +1,8 @@
 #import "AppDelegate.h"
+#import "S4FileUtilities.h"
+
+
+
 
 static NSString *FIELD_TEXT = @"T";
 static NSString *FIELD_PATH = @"P";
@@ -9,43 +13,43 @@ static NSString *FIELD_PATH = @"P";
 @synthesize searchBar;
 @synthesize resultField;
 
-- (void) fillDirectory:(LCFSDirectory*) rd
+
+
+- (void) fillDirectory:(LCFSDirectory *)rd
 {
     LCSimpleAnalyzer *analyzer = [[LCSimpleAnalyzer alloc] init];
-    
     LCIndexWriter *writer = [[LCIndexWriter alloc] initWithDirectory: rd
                                                             analyzer: analyzer
                                                               create: YES];
-    
+
     int i = 0;
     char buffer[40000];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"txt"]; 
+    NSString *filePath = [[NSBundle mainBundle] pathForResource: @"data" ofType: @"txt"]; 
     
     NSLog(@"opening %@", filePath);
     
     FILE *fh = fopen([filePath cStringUsingEncoding:NSASCIIStringEncoding], "r");
     
-    if (fh) while(!feof(fh)) {
+    if (fh) while(!feof(fh))
+	{
         
-        if (fgets(buffer, 40000, fh) == NULL) {
+        if (fgets(buffer, 40000, fh) == NULL)
+		{
             NSLog(@"no further line");
             break;
         }
         
         NSLog(@"* %d", i);
-        
-        NSString *line = [[NSString alloc] initWithCString:buffer];
+        NSString *line = [[NSString alloc] initWithCString: buffer];
 
         LCDocument *d = [[LCDocument alloc] init];
-
 
         LCField *f1 = [[LCField alloc] initWithName: FIELD_TEXT
                                             string: line
                                              store: LCStore_NO
                                              index: LCIndex_Tokenized];                                         
-
         LCField *f2 = [[LCField alloc] initWithName: FIELD_PATH
-                                   string: [NSString stringWithFormat:@"some/path/to/%d", i]
+                                   string: [NSString stringWithFormat: @"some/path/to/%d", i]
                                     store: LCStore_YES
                                     index: LCIndex_NO];
         [d addField: f1];
@@ -57,7 +61,6 @@ static NSString *FIELD_PATH = @"P";
         [writer addDocument: d];
 
         [d release];
-        
         [line release];
 
         i++;
@@ -69,43 +72,41 @@ static NSString *FIELD_PATH = @"P";
 
     [writer close];    
     [writer release];
-
     [analyzer release];
 }
 
-- (LCFSDirectory*) createFileDirectory
+
+- (LCFSDirectory *)createFileDirectory
 {
     // FIXME should be the application support folder
-    NSString *supportPath = @".";
+    NSString *supportPath = [S4FileUtilities documentsDirectory];
 
-    NSString *path = [supportPath stringByAppendingPathComponent:@"index.idx"];
+    NSString *path = [supportPath stringByAppendingPathComponent: @"index.idx"];
 
-    if ([[NSFileManager defaultManager] isReadableFileAtPath:path]) {
-        return [[LCFSDirectory alloc] initWithPath:path create: NO];
+    if ([[NSFileManager defaultManager] isReadableFileAtPath: path])
+	{
+        return [[LCFSDirectory alloc] initWithPath: path create: NO];
     }
 
-    LCFSDirectory *rd = [[LCFSDirectory alloc] initWithPath:path create: YES];
-
-    [self fillDirectory:rd];
-    
+    LCFSDirectory *rd = [[LCFSDirectory alloc] initWithPath: path create: YES];
+    [self fillDirectory: rd];
     return rd;
 }
 
-- (LCFSDirectory*) createRamDirectory
+
+- (LCFSDirectory *)createRamDirectory
 {
     LCFSDirectory *rd = [[LCRAMDirectory alloc] init];
-
-    [self fillDirectory:rd];
-    
+    [self fillDirectory: rd];
     return rd;
 }
 
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
-
+- (void)applicationDidFinishLaunching:(UIApplication *)application
+{
     [window makeKeyAndVisible];
 
-    //LCFSDirectory *rd = [self createRamDirectory];
+//    LCFSDirectory *rd = [self createRamDirectory];
     LCFSDirectory *rd = [self createFileDirectory];
 
     NSLog(@"opening searcher");
@@ -116,9 +117,9 @@ static NSString *FIELD_PATH = @"P";
 
     NSLog(@"ready");
     
-    [resultField setText:@""];
-
+    [resultField setText: @""];
 }
+
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {

@@ -239,16 +239,17 @@ static int MAX_BBUF = INT_MAX;
 	position = offset;
 }
 
-- (void) close { }
+
+- (void)close { }
+
 
 /* For clone() and ByteBuffer duplicate() in Java. */
 - (id) copyWithZone: (NSZone *)zone
 {
     LCMMapIndexInput *clone = [super copyWithZone:  NSDefaultMallocZone()];
-	
+
     /* [buffer copyWithZone: NSDefaultMallocZone()] */
-    clone->buffer = (NSMutableData *)NSCopyObject(buffer, 0,
-NSDefaultMallocZone()); 
+    clone->buffer = (NSMutableData *)NSCopyObject(buffer, 0, NSDefaultMallocZone()); 
     // NOTE: clone->file must be closed only when its retain count equals 1;
     // the fact is we cannot copy NSFileHandle object, that's why we retain it.
     [clone->file retain]; 
@@ -262,30 +263,27 @@ NSDefaultMallocZone());
 
 + (id)MultiMMapIndexInputWithPath: (NSString *)path maxBufferSize: (int)bufferSize
 {
-	LCMultiMMapIndexInput *indexInput = [LCMultiMMapIndexInput MultiMMapIndexInputWithURL: [NSURL fileURLWithPath: path] maxBufferSize: bufferSize];
-	return (indexInput);
+	return ([[[LCMultiMMapIndexInput alloc] initWithURL: [NSURL fileURLWithPath: path] maxBufferSize: bufferSize] autorelease]);
 }
 
-+ (id) MultiMMapIndexInputWithURL: (NSURL *)url 
-                    maxBufferSize: (int)bufferSize
+
++ (id)MultiMMapIndexInputWithURL: (NSURL *)url maxBufferSize: (int)bufferSize
 {
-	LCMultiMMapIndexInput *indexInput = [[LCMultiMMapIndexInput alloc]
-         initWithURL: url maxBufferSize: bufferSize];
-	
-	return [indexInput autorelease];
+	return ([[[LCMultiMMapIndexInput alloc] initWithURL: url maxBufferSize: bufferSize] autorelease]);
 }
 
-- (id) initWithPath: (NSString *)path maxBufferSize: (int)bufferSize
+
+- (id)initWithPath: (NSString *)path maxBufferSize: (int)bufferSize
 {
-    return [self initWithURL: [NSURL fileURLWithPath: path] 
-               maxBufferSize: bufferSize];
+    return [self initWithURL: [NSURL fileURLWithPath: path] maxBufferSize: bufferSize];
 }
 
-- (id) initWithURL: (NSURL *)url maxBufferSize: (int)bufferSize
+
+- (id)initWithURL: (NSURL *)url maxBufferSize: (int)bufferSize
 {
 	if ((self = [super initWithURL: url]) != nil)
 	{
-        self->maxBufferSize = maxBufferSize;
+        self->maxBufferSize = bufferSize;
         if (maxBufferSize <= 0)
         {
             [NSException raise: NSInvalidArgumentException 
@@ -330,21 +328,15 @@ NSDefaultMallocZone());
         int i;
         for (i = 0; i < buffersCount; i++) 
         { 
-            int bufferSize = (length > (bufferStart + maxBufferSize))
-                ? maxBufferSize
-                : (int) (length - bufferStart);
-            NSData *newBuffer = [NSData dataWithBytesNoCopy: 
-                    (void *)([fileMap bytes] + bufferStart) length: bufferSize];
-            
+            int bufferSize = (length > (bufferStart + maxBufferSize)) ? maxBufferSize : (int)(length - bufferStart);
+            NSData *newBuffer = [NSData dataWithBytesNoCopy: (void *)([fileMap bytes] + bufferStart) length: bufferSize];
             [buffers addObject: newBuffer]; /* At index i */
             self->bufferSizes[i] = bufferSize;
             bufferStart += bufferSize;
         }
         [self seekToFileOffset: 0L];
- 
         return self;
     }
-
     return nil;	
 }
 

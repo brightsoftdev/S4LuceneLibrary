@@ -143,26 +143,30 @@ time. */
 {
 	if ([heap count] == 0) return;
 	int i = 0;
-	id node = [heap objectAtIndex: i];	  // save top node
+	id node = [heap objectAtIndex: 0];	  // save top node
 	RETAIN(node);
-	int j = i << 1;				  // find smaller child
+	int j = 0 << 1;				  // find smaller child
 	int k = j + 1;
-	if (k < [heap count] && [self lessThan: [heap objectAtIndex: k]: [heap objectAtIndex: j]]) {
+	if (k < [heap count] && [self lessThan: [heap objectAtIndex: k]: [heap objectAtIndex: j]])
+	{
 		j = k;
-		}
-	while (j < [heap count] && [self lessThan: [heap objectAtIndex: j] : node]) {
+	}
+
+	while (j < [heap count] && [self lessThan: [heap objectAtIndex: j] : node])
+	{
 		// shift up child
 		[heap replaceObjectAtIndex: i withObject: [heap objectAtIndex: j]];
 		i = j;
 		j = i << 1;
 		k = j + 1;
-		if (k < [heap count] && [self lessThan: [heap objectAtIndex: k] : [heap objectAtIndex: j]]) {
+		if (k < [heap count] && [self lessThan: [heap objectAtIndex: k] : [heap objectAtIndex: j]])
+		{
 			j = k;
-			}
 		}
+	}
 	[heap replaceObjectAtIndex: i withObject: node]; // install saved node
 	DESTROY(node);
-		}
+}
 
 @end
 

@@ -79,18 +79,18 @@ CodeType codeType(unichar *ch)
     } 
 }
 
-- (void) parse
+- (void)parse
 {
   unsigned int i, start, end;
   CodeType startType, endType;
   NSString *out;
 
   start = 0;
-  startType = codeType(_uchar+start);
+  startType = codeType(_uchar + 0);
 
   [_handler beginParsing];
 
-  for (i = 1; i < _length+1; i++)
+  for (i = 1; i < _length + 1; i++)
     {
       end = i;
       endType = codeType(_uchar+end);

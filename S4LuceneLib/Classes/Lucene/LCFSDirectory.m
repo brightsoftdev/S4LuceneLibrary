@@ -34,7 +34,7 @@
 }
 
 			 
-- (id) initWithPath: (NSString *)p create: (BOOL)b
+- (id)initWithPath: (NSString *)p create: (BOOL)b
 {
 	BOOL isDir;
 

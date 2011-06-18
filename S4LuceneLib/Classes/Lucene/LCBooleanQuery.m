@@ -111,39 +111,52 @@ static int maxClauseCount = 1024;
 	return AUTORELEASE([[LCBooleanWeight alloc] initWithSearcher: searcher minimumNumberShouldMatch: minNrShouldMatch query: self]);
 }
 
-- (LCQuery *) rewrite: (LCIndexReader *) reader
+- (LCQuery *)rewrite: (LCIndexReader *)reader
 {
-	if ([clauses count] == 1) { // optimize 1-clause queries
+	if ([clauses count] == 1)										// optimize 1-clause queries
+	{
 		LCBooleanClause *c = [clauses objectAtIndex: 0];
-		if ([c isProhibited]) { // just return clause
-			LCQuery *query = [[c query] rewrite: reader]; // rewrite first
-			if ([self boost] != 1.0f) {// incorporate boost
-				if ([query isEqual: [c query]]) // if rewrite was no-op
+		if ([c isProhibited])										// just return clause
+		{
+			LCQuery *query = [[c query] rewrite: reader];			// rewrite first
+			if ([self boost] != 1.0f)								// incorporate boost
+			{
+				if ([query isEqual: [c query]])						// if rewrite was no-op
+				{
 					query = [query copy];
+				}
 				[query setBoost: [self boost] * [query boost]];
 			}
 			return query;
 		}
 	}
 	
-	LCBooleanQuery *clone = nil; // recursively rewrite
+	LCBooleanQuery *clone = nil;									// recursively rewrite
 	int i;
-	for (i = 0; i < [clauses count]; i++) {
+	for (i = 0; i < [clauses count]; i++)
+	{
 		LCBooleanClause *c = [clauses objectAtIndex: i];
 		LCQuery *query = [[c query] rewrite: reader];
-		if ([query isEqual: [c query]] == NO) { // clause rewrote: must clone
+		if ([query isEqual: [c query]] == NO)						// clause rewrote: must clone
+		{
 			if (clone == nil)
+			{
 				clone = [self copy];
+			}
 			LCBooleanClause *clause = [[LCBooleanClause alloc] initWithQuery: query occur: [c occur]];
 			[clone replaceClauseAtIndex: i withClause: AUTORELEASE(clause)];
 		}
 	}
-	if (clone != nil) {
-		return clone; // some clauses rewrote
-	} else {
-		return self; // no clauses rewrote
+	if (clone != nil)
+	{
+		return clone;												// some clauses rewrote
+	}
+	else
+	{
+		return self;												// no clauses rewrote
 	}
 }
+
 
 - (void) extractTerms: (NSMutableArray *) terms
 {
