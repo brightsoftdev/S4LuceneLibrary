@@ -1,6 +1,11 @@
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 S4LuceneLib/build
+S4LuceneLib/dist/Headers/*.h
+S4LuceneLib/dist/libS4LuceneLib.a
+S4LuceneLib/dist/Resources/*.xib
+S4LuceneLib/dist/Resources/*.png
+iPhoneLuceneSearch/build
 *.pbxuser
 *.mode1v3
 *.mode2v3
@@ -9,7 +14,9 @@ target/*
 .DS_Store
 profile
 *.svn
-S4LuceneLib/dist/Headers/*.h
-S4LuceneLib/dist/Resources/Lucene.png
-S4LuceneLib/dist/libS4LuceneLib.a
-iPhoneLuceneSearch/build
+/.svn/*
+*/*/xcuserdata
+*/*/*/xcuserdata
+*/*/*/*/xcuserdata
+*.hg
+/.hg/*
