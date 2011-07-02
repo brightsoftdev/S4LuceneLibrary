@@ -1009,7 +1009,6 @@
 		0A87A966123863AF0094AAED /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				0A21371C13AD3E2E00E14101 /* SFHFKeychainUtils.h */,
 				0A87A96D123863C30094AAED /* S4iOSLib */,
 			);
 			name = Vendor;
@@ -1054,6 +1053,7 @@
 				0AA59D5E1294AD4600C3ACDE /* S4UIDeviceManager.h */,
 				0AA59D5F1294AD4600C3ACDE /* S4UserDefaultsManager.h */,
 				0AA59D601294AD4600C3ACDE /* S4XMLToDictionaryParser.h */,
+				0A21371C13AD3E2E00E14101 /* SFHFKeychainUtils.h */,
 				0AA59D611294AD4600C3ACDE /* sha1.h */,
 			);
 			name = Headers;
@@ -1296,6 +1296,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "SeaStones Software";
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "S4LuceneLib" */;
@@ -1491,7 +1492,6 @@
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/S4LuceneLib.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1532,12 +1532,11 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1551,12 +1550,11 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

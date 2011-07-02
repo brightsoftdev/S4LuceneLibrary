@@ -1,14 +1,12 @@
 #import <UIKit/UIKit.h>
 #import "LuceneKit.h"
 
-@interface AppDelegate : NSObject <UIApplicationDelegate, UISearchBarDelegate> {
-
-    UIWindow *window;
-    UISearchBar *searchBar;
-    UILabel *resultField;
-
-    LCIndexSearcher *searcher;
-
+@interface AppDelegate : NSObject <UIApplicationDelegate, UISearchBarDelegate>
+{
+    UIWindow					*window;
+    UISearchBar					*searchBar;
+    UILabel						*resultField;
+    LCIndexSearcher				*searcher;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

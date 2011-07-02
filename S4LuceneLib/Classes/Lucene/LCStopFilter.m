@@ -46,7 +46,7 @@
             stopWordsInSet: (NSSet *) sw
 {
 	self = [super initWithTokenStream: stream];
-	stopWords = [[NSSet alloc] initWithSet: sw];
+	stopWords = [[NSMutableSet alloc] initWithSet: sw];
 	return self;
 }
 

@@ -7,34 +7,37 @@
 @implementation LCStopAnalyzer
 
 /** Builds an analyzer which removes words in ENGLISH_STOP_WORDS. */
-- (id) init
+- (id)init
 {
-	/** An array containing some common English words that are not usually useful
-    for searching. */
-	ENGLISH_STOP_WORDS = [[NSArray alloc] initWithObjects:
-		@"a", @"an", @"and", @"are", @"as", @"at", @"be", @"but", @"by",
-		@"for", @"if", @"in", @"into", @"is", @"it",
-		@"no", @"not", @"of", @"on", @"or", @"s", @"such",
-		@"t", @"that", @"the", @"their", @"then", @"there", @"these",
-		@"they", @"this", @"to", @"was", @"will", @"with", nil];
-	self = [self initWithStopWords: ENGLISH_STOP_WORDS];
-	return self;
+	return ([self initWithStopWords: nil]);
 }
 
-- (id) initWithStopWords: (NSArray *) sw
+- (id)initWithStopWords: (NSArray *)sw
 {
 	self = [super init];
-	stopWords = [[NSSet alloc] initWithSet: [LCStopFilter makeStopSet: sw]];
+	if (nil != self)
+	{
+		/** An array containing some common English words that are not usually useful
+		 for searching. */
+		ENGLISH_STOP_WORDS = [[NSArray alloc] initWithObjects:
+							  @"a", @"an", @"and", @"are", @"as", @"at", @"be", @"but", @"by",
+							  @"for", @"if", @"in", @"into", @"is", @"it",
+							  @"no", @"not", @"of", @"on", @"or", @"s", @"such",
+							  @"t", @"that", @"the", @"their", @"then", @"there", @"these",
+							  @"they", @"this", @"to", @"was", @"will", @"with", nil];
+
+		if (nil != sw)
+		{
+			stopWords = [[NSMutableSet alloc] initWithSet: [LCStopFilter makeStopSet: sw]];
+		}
+		else
+		{
+			stopWords = [[NSMutableSet alloc] initWithSet: [LCStopFilter makeStopSet: ENGLISH_STOP_WORDS]];
+		}
+	}
 	return self;
 }
 
-#if 0
-  /** Builds an analyzer with the stop words from the given set.
- 	    */
- 	   public StopAnalyzer(Set stopWords) {
- 	     this.stopWords = stopWords;
- 	   }
-#endif
 
 /* LuceneKit: TODO */
 #if 0

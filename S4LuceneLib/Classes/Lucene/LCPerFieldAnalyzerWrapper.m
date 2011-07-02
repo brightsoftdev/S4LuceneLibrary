@@ -20,7 +20,7 @@
 {
 	self = [self init];
 	ASSIGN(defaultAnalyzer, analyzer);
-	analyzerMap = [[NSDictionary alloc] init];
+	analyzerMap = [[NSMutableDictionary alloc] init];
 	return self;
 }
 

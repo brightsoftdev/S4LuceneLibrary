@@ -40,7 +40,7 @@ static NSString *FIELD_PATH = @"P";
         }
         
         NSLog(@"* %d", i);
-        NSString *line = [[NSString alloc] initWithCString: buffer];
+        NSString *line = [[NSString alloc] initWithUTF8String: buffer];
 
         LCDocument *d = [[LCDocument alloc] init];
 
@@ -94,29 +94,15 @@ static NSString *FIELD_PATH = @"P";
 }
 
 
-- (LCFSDirectory *)createRamDirectory
-{
-    LCFSDirectory *rd = [[LCRAMDirectory alloc] init];
-    [self fillDirectory: rd];
-    return rd;
-}
-
-
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
     [window makeKeyAndVisible];
 
-//    LCFSDirectory *rd = [self createRamDirectory];
     LCFSDirectory *rd = [self createFileDirectory];
-
     NSLog(@"opening searcher");
-
 	searcher = [[LCIndexSearcher alloc] initWithDirectory: rd];
-
     [rd release];
-
     NSLog(@"ready");
-    
     [resultField setText: @""];
 }
 

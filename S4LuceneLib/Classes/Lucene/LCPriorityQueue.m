@@ -146,7 +146,7 @@ time. */
 	id node = [heap objectAtIndex: 0];	  // save top node
 	RETAIN(node);
 	int j = 0 << 1;				  // find smaller child
-	int k = j + 1;
+	int k = 1;
 	if (k < [heap count] && [self lessThan: [heap objectAtIndex: k]: [heap objectAtIndex: j]])
 	{
 		j = k;

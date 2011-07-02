@@ -64,14 +64,16 @@
 }
 
 	/** Use Lucene LCDirectory as virtual file system */
-- (id) initWithDirectory: (id <LCDirectory>) d create: (BOOL) c
+- (id)initWithDirectory: (id <LCDirectory>)dir create: (BOOL)bCreate
 {
-	importers = [[NSMutableArray alloc] init];
-	paths = [[NSMutableArray alloc] init];
-	pairs = [[NSMutableDictionary alloc] init];
-	return [self initWithDirectory: d
-						  analyzer: AUTORELEASE([[LCSimpleAnalyzer alloc] init])
-							create: c];
+	self = [self initWithDirectory: dir analyzer: AUTORELEASE([[LCSimpleAnalyzer alloc] init]) create: bCreate];
+	if (nil != self)
+	{
+		importers = [[NSMutableArray alloc] init];
+		paths = [[NSMutableArray alloc] init];
+		pairs = [[NSMutableDictionary alloc] init];
+	}
+	return (self); 
 }
 
 	/** Add path for indexing.
